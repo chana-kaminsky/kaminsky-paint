@@ -8,12 +8,19 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
 
-<GridPane
-        xmlns:fx="http://javafx.com/fxml" alignment="top_center"
-        hgap="10" vgap="10">
+<?import kaminsky.paint.PaintCanvas?>
+<GridPane fx:controller="kaminsky.paint.PaintController"
+          xmlns:fx="http://javafx.com/fxml" alignment="top_center"
+          hgap="10" vgap="10">
 
-    <padding>
-        <Insets top="25" right="25" bottom="10" left="25"/>
-    </padding>
+
+
+    <PaintCanvas fx:id="paintCanvas"
+                 width="500"
+                 height="350"
+                 GridPane.columnIndex="0"
+                 GridPane.rowIndex="0"/>
+
+
 
 </GridPane>
