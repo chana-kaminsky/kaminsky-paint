@@ -13,14 +13,26 @@
           xmlns:fx="http://javafx.com/fxml" alignment="top_center"
           hgap="10" vgap="10">
 
-
-
     <PaintCanvas fx:id="paintCanvas"
                  width="500"
                  height="350"
                  GridPane.columnIndex="0"
                  GridPane.rowIndex="0"/>
 
+    <ColorPicker fx:id="colorPicker"
+                 onAction="#draw"
+                 GridPane.rowIndex="0"
+                 GridPane.columnIndex="0"
+                 GridPane.valignment="TOP"
+                 GridPane.halignment="LEFT"/>
+
+    <Button fx:id="eraserButton"
+            text="Eraser"
+            onAction="#erase"
+            GridPane.rowIndex="0"
+            GridPane.columnIndex="0"
+            GridPane.valignment="TOP"
+            GridPane.halignment="RIGHT"/>
 
 
 </GridPane>

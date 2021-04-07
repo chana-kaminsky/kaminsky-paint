@@ -1,6 +1,7 @@
 package kaminsky.paint;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,6 +9,8 @@ import javafx.stage.Stage;
 
 public class PaintApplication extends Application
 {
+    @FXML
+    PaintCanvas paintCanvas;
     public void start(Stage stage) throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("/paint_application.fxml"));

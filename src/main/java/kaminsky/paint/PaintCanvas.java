@@ -6,25 +6,44 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
-
 public class PaintCanvas extends Canvas
 {
-    public void draw()
-    {
-        GraphicsContext context = getGraphicsContext2D();
-        context.setFill(Color.WHITE);
-        context.fillRect(0, 0, getWidth(), getHeight());
-        context.setStroke(Color.DARKRED);
-        context.setLineWidth(5);
 
+    final GraphicsContext context = getGraphicsContext2D();
+
+    boolean draw = true;
+    Color color;
+
+    public PaintCanvas()
+    {
         addEventHandler(MouseEvent.MOUSE_DRAGGED,
                 new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event) {
-                        context.strokeLine(event.getX(), event.getY(), event.getX(), event.getY());
+                        if (draw) {
+                            context.setStroke(color);
+                            context.strokeLine(event.getX(), event.getY(), event.getX(), event.getY());
+                        }
+                        else {
+                            context.clearRect(event.getX()-5, event.getY()-5, 10, 10);
+                        }
                     }
                 });
     }
 
+
+
+    public void draw(Color color)
+    {
+        context.setLineWidth(5);
+        this.color = color;
+        draw = true;
+    }
+
+    public void erase()
+    {
+        context.setLineWidth(10);
+        draw = false;
+    }
 
 }
