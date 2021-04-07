@@ -10,16 +10,17 @@
 
 <?import kaminsky.paint.PaintCanvas?>
 <GridPane fx:controller="kaminsky.paint.PaintController"
-          xmlns:fx="http://javafx.com/fxml" alignment="top_center"
-          hgap="10" vgap="10">
+          xmlns:fx="http://javafx.com/fxml" alignment="top_center">
 
-    <PaintCanvas fx:id="paintCanvas"
-                 width="500"
-                 height="350"
-                 GridPane.columnIndex="0"
-                 GridPane.rowIndex="0"/>
+    <PaintCanvas
+        fx:id="paintCanvas"
+        width="500"
+        height="350"
+        GridPane.columnIndex="0"
+        GridPane.rowIndex="0"/>
 
-    <ColorPicker fx:id="colorPicker"
+    <ColorPicker
+            fx:id="colorPicker"
                  onAction="#draw"
                  GridPane.rowIndex="0"
                  GridPane.columnIndex="0"
@@ -34,5 +35,13 @@
             GridPane.valignment="TOP"
             GridPane.halignment="RIGHT"/>
 
+    <Button fx:id="clearButton"
+            text="Clear"
+            onAction="#clear"
+            GridPane.rowIndex="0"
+            GridPane.columnIndex="0"
+            GridPane.valignment="TOP"
+            GridPane.halignment="CENTER"/>
 
-</GridPane>
+    </GridPane>
+

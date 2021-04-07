@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
 public class PaintCanvas extends Canvas
 {
 
-    final GraphicsContext context = getGraphicsContext2D();
+    protected final GraphicsContext context = getGraphicsContext2D();
 
     boolean draw = true;
     Color color;
@@ -25,13 +25,11 @@ public class PaintCanvas extends Canvas
                             context.strokeLine(event.getX(), event.getY(), event.getX(), event.getY());
                         }
                         else {
-                            context.clearRect(event.getX()-5, event.getY()-5, 10, 10);
+                            context.clearRect(event.getX()-10, event.getY()-10, 20, 20);
                         }
                     }
                 });
     }
-
-
 
     public void draw(Color color)
     {
@@ -44,6 +42,11 @@ public class PaintCanvas extends Canvas
     {
         context.setLineWidth(10);
         draw = false;
+    }
+
+    public void clear()
+    {
+        context.clearRect(0,0,getWidth(), getHeight());
     }
 
 }
