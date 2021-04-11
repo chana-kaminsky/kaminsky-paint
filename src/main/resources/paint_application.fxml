@@ -15,31 +15,20 @@
     <PaintCanvas
         fx:id="paintCanvas"
         width="500"
-        height="350"
-        GridPane.columnIndex="0"
-        GridPane.rowIndex="0"/>
+        height="350"/>
 
-    <ColorPicker
-            fx:id="colorPicker"
+    <ColorPicker fx:id="colorPicker"
                  onAction="#draw"
-                 GridPane.rowIndex="0"
-                 GridPane.columnIndex="0"
                  GridPane.valignment="TOP"
                  GridPane.halignment="LEFT"/>
 
-    <Button fx:id="eraserButton"
-            text="Eraser"
+    <Button text="Eraser"
             onAction="#erase"
-            GridPane.rowIndex="0"
-            GridPane.columnIndex="0"
             GridPane.valignment="TOP"
             GridPane.halignment="RIGHT"/>
 
-    <Button fx:id="clearButton"
-            text="Clear"
+    <Button text="Clear"
             onAction="#clear"
-            GridPane.rowIndex="0"
-            GridPane.columnIndex="0"
             GridPane.valignment="TOP"
             GridPane.halignment="CENTER"/>
 

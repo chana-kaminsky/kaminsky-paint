@@ -8,7 +8,6 @@ import javafx.scene.paint.Color;
 
 public class PaintCanvas extends Canvas
 {
-
     protected final GraphicsContext context = getGraphicsContext2D();
 
     boolean draw = true;
@@ -16,13 +15,23 @@ public class PaintCanvas extends Canvas
 
     public PaintCanvas()
     {
+        addEventHandler(MouseEvent.MOUSE_PRESSED,
+                new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        context.setStroke(color);
+                        context.beginPath();
+
+                    }
+                });
+
         addEventHandler(MouseEvent.MOUSE_DRAGGED,
                 new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event) {
                         if (draw) {
-                            context.setStroke(color);
-                            context.strokeLine(event.getX(), event.getY(), event.getX(), event.getY());
+                            context.lineTo(event.getX(), event.getY());
+                            context.stroke();
                         }
                         else {
                             context.clearRect(event.getX()-10, event.getY()-10, 20, 20);
