@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import kaminsky.paint.PaintCanvas?>
 
-<GridPane fx:controller="kaminsky.paint.PaintController"
-          xmlns:fx="http://javafx.com/fxml" alignment="top_center">
+<GridPane xmlns:fx="http://javafx.com/fxml" alignment="top_center">
 
     <PaintCanvas
         fx:id="paintCanvas"

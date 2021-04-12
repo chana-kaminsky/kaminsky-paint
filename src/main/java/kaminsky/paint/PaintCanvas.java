@@ -15,6 +15,11 @@ public class PaintCanvas extends Canvas
 
     public PaintCanvas()
     {
+        addEvent();
+    }
+
+    public void addEvent()
+    {
         addEventHandler(MouseEvent.MOUSE_PRESSED,
                 new EventHandler<MouseEvent>() {
                     @Override
