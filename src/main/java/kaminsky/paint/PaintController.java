@@ -1,10 +1,7 @@
 package kaminsky.paint;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.paint.Color;
 
 public class PaintController

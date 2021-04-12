@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 
 public class PaintCanvas extends Canvas
 {
-    protected final GraphicsContext context = getGraphicsContext2D();
+    protected GraphicsContext context = getGraphicsContext2D();
 
     boolean draw = true;
     Color color;
