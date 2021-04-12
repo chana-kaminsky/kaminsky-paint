@@ -62,5 +62,4 @@ public class PaintCanvas extends Canvas
     {
         context.clearRect(0,0,getWidth(), getHeight());
     }
-
 }
