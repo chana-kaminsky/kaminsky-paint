@@ -7,10 +7,9 @@
 
 <GridPane xmlns:fx="http://javafx.com/fxml" alignment="top_center">
 
-    <PaintCanvas
-        fx:id="paintCanvas"
-        width="500"
-        height="350"/>
+    <PaintCanvas fx:id="paintCanvas"
+                 width="500"
+                 height="350"/>
 
     <ColorPicker fx:id="colorPicker"
                  onAction="#draw"
@@ -28,4 +27,3 @@
             GridPane.halignment="CENTER"/>
 
     </GridPane>
-

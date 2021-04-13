@@ -35,7 +35,6 @@ public class PaintControllerTest
         // then
         verify(colorPicker).setValue(Color.BLACK);
         verify(paintCanvas.context).setLineWidth(5);
-
     }
 
     @Test
